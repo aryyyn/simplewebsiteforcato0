@@ -1,91 +1,95 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-  }
-  
-  header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  .card
-  {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .left-card
-  {
+  font-family: Arial, Helvetica, sans-serif;
+  font: Helvetica;
+  background: url(https://cdn.dribbble.com/users/189524/screenshots/2103470/01-black-cat_800x600_v1.gif);
+  background-size: cover;
+  height: 100vh;
+}
+header {
+  background-color: #00000083;
+  color: white;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 15px 8px 0px hsla(210, 15%, 81%, 0.959);
+}
+main {
+  padding: 20px;
+}
+.card {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.left-card, .right-card {
   padding: 1em;
   text-align: center;
-  box-shadow: 0 15px 8px 0px rgba(0, 0, 0, 0.2);
+  color: white;
+  box-shadow: 0 15px 8px 0px hsla(209, 22%, 46%, 0.959);
   transition: 0.3s;
-  width: 40%;
- 
- 
-  }
-  .left-card:hover
-  {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    transform: scale(1.1);
-  }
-  .right-card
-  {
-  padding: 1em;
+  width: 42%;
+  border: white solid;
+}
+.left-card:hover, .right-card:hover {
+  box-shadow: 0 15px 8px 0 rgba(79, 133, 103, 0.815);
+  transform: scale(1.1);
+}
+.header {
+  overflow: hidden;
+  background-color: #000000;
+  padding: 2px 5px;
+}
+.header a {
+  float: left;
+  color: rgb(250, 250, 250);
   text-align: center;
-  box-shadow: 0 15px 8px 0px rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  width: 40%;
-  }
-  .right-card:hover
-  {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    transform: scale(1.1);
-  }
+  padding: 5px;
+  text-decoration: none;
+  font-size: 10px;
+  line-height: 25px;
+  border-radius: 4px;
+}
 
-  .header {
-    overflow: hidden;
-    background-color: #000000;
-    padding: 2px 5px;
-  }
+.header-right a
+{
+  padding: 7px;
+  font-size: 10px;
+  line-height: 15px;
+  width: 70px;
+}
+.header a:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+.header a.active {
+  background-color: gray;
+  color: white;
+}
+.header-right {
+  float: right;
   
+}
+footer {
+  background-color: #0f0f0f;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  text-align: center;
+  margin-top: 50px;
+}
+@media (max-width: 600px) {
   .header a {
-    float: left;
-    color: rgb(250, 250, 250);
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px; 
-    line-height: 25px;
-    border-radius: 4px;
-  }
-
- 
-  
-  .header a:hover {
-    background-color: rgb(161, 154, 180);
-    color: black;
-  }
-  
-  .header a.active {
-    background-color: dodgerblue;
-    color: white;
-  }
-  
+      float: none;
+      display: block;
+      text-align: left;
+ }
+  @media only screen and (max-width: 800px) {
+ }
   .header-right {
-    float: right;
-  }
- 
-  footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-  }
-  
+      float: none;
+ }
+  .card {
+      flex-direction: column;
+ }
+  .left-card, .right-card {
+      width: 100%;
+ }
+}
